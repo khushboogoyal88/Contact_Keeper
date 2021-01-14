@@ -5,6 +5,8 @@ const app = express();
 
 connectDB(); // connect Database
 
+app.use(express.json({ extended: false })); // init middleware
+
 app.get("/", (
   req,
   res // all this can be when server is connected
